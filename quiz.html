@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-color: #3C5B6F;
+    }
+    .container{
+        background-color: #3C5B6F;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Quiz Application</h1>
+
+        <form id="quizForm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Question 1: What is the capital of France?</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="q1_option1" value="Paris" >
+                        <label class="form-check-label" for="q1_option1">Paris</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="q1_option2" value="London">
+                        <label class="form-check-label" for="q1_option2">London</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="q1_option3" value="Berlin">
+                        <label class="form-check-label" for="q1_option3">Berlin</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="q1_option4" value="Rome">
+                        <label class="form-check-label" for="q1_option4">Rome</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Question 2: What is the largest mammal?</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="q2_option1" value="Elephant">
+                        <label class="form-check-label" for="q2_option1">Elephant</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="q2_option2" value="Blue whale">
+                        <label class="form-check-label" for="q2_option2">Blue whale</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="q2_option3" value="Giraffe">
+                        <label class="form-check-label" for="q2_option3">Giraffe</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="q2_option4" value="Hippopotamus" >
+                        <label class="form-check-label" for="q2_option4">Hippopotamus</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Question 3: What is the capital of Japan?</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="q3_option1" value="Tokyo">
+                        <label class="form-check-label" for="q3_option1">Tokyo</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="q3_option2" value="Beijing">
+                        <label class="form-check-label" for="q3_option2">Beijing</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="q3_option3" value="Seoul">
+                        <label class="form-check-label" for="q3_option3">Seoul</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="q3_option4" value="Bangkok">
+                        <label class="form-check-label" for="q3_option4">Bangkok</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Question 4: Which planet is known as the Red Planet?</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="q4_option1" value="Venus">
+                        <label class="form-check-label" for="q4_option1">Venus</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="q4_option2" value="Mercury">
+                        <label class="form-check-label" for="q4_option2">Mercury</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="q4_option3" value="Mars">
+                        <label class="form-check-label" for="q4_option3">Mars</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="q4_option4" value="Jupiter">
+                        <label class="form-check-label" for="q4_option4">Jupiter</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">Question 5: What is the chemical symbol for water?</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="q5_option1" value="H2O">
+                        <label class="form-check-label" for="q5_option1">H2O</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="q5_option2" value="CO2">
+                        <label class="form-check-label" for="q5_option2">CO2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="q5_option3" value="N2">
+                        <label class="form-check-label" for="q5_option3">N2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="q5_option4" value="O2">
+                        <label class="form-check-label" for="q5_option4">O2</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button onclick="check(event)" type="submit" class="btn btn-primary mt-4">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+    let check = (event) => {
+        event.preventDefault();
+        let totalCount = 0;
+
+        // Q1
+        let options1 = document.getElementsByName('q1');
+        let correctOption1 = document.querySelector('#q1_option1').value;
+        options1.forEach(element => {
+            if (element.checked && element.value === correctOption1) {
+                totalCount++;
+            }
+        });
+
+        // Q2
+        let options2 = document.getElementsByName('q2');
+        let correctOption2 = document.querySelector('#q2_option4').value;
+        options2.forEach(element => {
+            if (element.checked && element.value === correctOption2) {
+                totalCount++;
+            }
+        });
+        let options3 = document.getElementsByName('q3');
+        let correctOption3 = document.querySelector('#q3_option1').value;
+        options3.forEach(element => {
+            if (element.checked && element.value === correctOption3) {
+                totalCount++;
+            }
+        });
+        let options4 = document.getElementsByName('q4');
+        let correctOption4 = document.querySelector('#q4_option2').value;
+        options4.forEach(element => {
+            if (element.checked && element.value === correctOption4) {
+                totalCount++;
+            }
+        });
+        let options5 = document.getElementsByName('q5');
+        let correctOption5 = document.querySelector('#q5_option1').value;
+        options5.forEach(element => {
+            if (element.checked && element.value === correctOption5) {
+                totalCount++;
+            }
+        });
+
+        console.log("Total correct answers: " + totalCount);
+        sessionStorage.setItem("totalCorrect", totalCount);
+        window.location.href='Result.html';
+    }
+    
+
+</script>
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

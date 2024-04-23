@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #77B0AA;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form {
+            margin-bottom: 20px;
+        }
+        
+        .data{
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+         #submit{
+            background-color: #4e5cda;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Details Form</h2>
+
+            <div class="form">
+                <label for="roll_number">Roll Number:</label>
+                <input type="text" id="data1" class="data"  placeholder="Enter Roll Number">
+            </div>
+            <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" id="data2" class="data"  placeholder="Enter Name">
+            </div>
+            <div class="form">
+                <label for="batch">Batch:</label>
+                <input type="text" id="data3" class="data"  placeholder="Enter Batch">
+            </div>
+            <div class="form">
+                <label for="session">Session:</label>
+                <input type="text" id="data4" class="data"  placeholder="Enter Session">
+            </div>
+            <input type="submit" onclick="sendData()" id="submit">
+        </form>
+    </div>
+    <script>
+        const sendData=()=>{
+            let rollnumber=document.querySelector('#data1').value;
+            sessionStorage.setItem('rollnumber',rollnumber);
+            let name=document.querySelector('#data2').value;
+            sessionStorage.setItem('name',name);
+            let batch=document.querySelector('#data3').value;
+            sessionStorage.setItem('batch',batch);
+            let session=document.querySelector('#data4').value;
+            sessionStorage.setItem('session',session);
+            
+         
+        window.location.href = 'quiz.html';
+    }
+
+        
+
+    </script>
+
+</body>
+</html>
