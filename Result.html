@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Quiz Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3C5B6F;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration and Quiz Results</h1>
+        <h2>Registration Details</h2>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Roll Number</td>
+                <td id="rollnumber"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Batch</td>
+                <td id="batch"></td>
+            </tr>
+            <tr>
+                <td>Session</td>
+                <td id="session"></td>
+            </tr>
+        </table>
+
+        <h2>Quiz Results</h2>
+        <p>Total Correct Answers: <span id="totalCorrect"></span></p>
+    </div>
+
+    <script>
+    var name = sessionStorage.getItem('name');
+        var rollnumber= sessionStorage.getItem('rollnumber');
+        var batch=sessionStorage.getItem('batch');
+        var session=sessionStorage.getItem('session');
+
+        document.getElementById('name').textContent = name;
+        document.getElementById('rollnumber').textContent = rollnumber;
+        document.getElementById('batch').textContent = batch;
+        document.getElementById('session').textContent = session;
+
+        // Retrieve quiz results from sessionStorage
+        var totalCorrect = sessionStorage.getItem('totalCorrect');
+
+        // Display quiz results
+        document.getElementById('totalCorrect').textContent = totalCorrect;
+
+    </script>
+</body>
+</html>
